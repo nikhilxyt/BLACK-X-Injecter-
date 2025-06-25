@@ -24,31 +24,18 @@ Optimized for Unity il2cpp games, it supports floating UI, native hooking, and 6
 
 ---
 
-## 📁 Folder Structure
-AndroidInjector/
-├── app/                        # Java Android app source
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/           # Java package (UI, Service)
-│   │   │   ├── res/            # UI resources (layouts, icons)
-│   │   │   └── AndroidManifest.xml
-│   └── build.gradle
-│
-├── jni/                        # Native C++ injector code
-│   ├── main.cpp                # Entry point for native injector
-│   ├── Injector.hpp/.cpp       # Memory patching, native methods
-│   ├── Dobby/                  # Optional: Hooking library
-│   ├── KittyMemory/            # Optional: Memory patching lib
-│   ├── imgui/                  # ImGui floating UI
-│   ├── UnityOffsets.hpp        # Offsets for il2cpp structures
-│   └── config.h                # Custom feature toggles
-│
-├── libs/                       # Precompiled .so libraries
-│   └── arm64-v8a/
-│       └── libmodmenu.so
-│
-├── CMakeLists.txt              # CMake config for JNI build
-├── Android.mk                  # (Optional) Android NDK makefile
-├── build.gradle                # Project-level Gradle file
-├── settings.gradle
-└── README.md                   # Project documentation
+## ⚙️ Requirements
+
+- Android 8.0+ (64-bit)
+- Android NDK (r21 or newer)
+- Root access or virtualization (optional)
+- Unity il2cpp target game
+- AIDE, Android Studio, or Termux (for build/debug)
+
+---
+
+## 🛠️ Build Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourname/AndroidInjector.git
